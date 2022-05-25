@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>testando responsividade</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function myFunction() {
+            document.getElementById("demo").innerHTML = "mudança de paragrafo.";
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: gray;
+        }
+        main {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+
+            min-width: 280px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        button#botaopequena {
+          background-color:white;
+          
+        }
+        button#botaogrande {
+            background-color: white;
+        }
+
+        img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Testando Resposividade</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora voluptatum nihil, quibusdam repellendus cum asperiores vitae, beatae, sint atque provident necessitatibus distinctio excepturi debitis quisquam perspiciatis voluptas aliquam quam voluptate.lorem Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus ducimus fugiat molestiae consequatur, magni quia corporis, reiciendis alias quae necessitatibus numquam perspiciatis animi autem aut voluptate? Nihil veritatis itaque beatae. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae accusamus voluptatem minus ad magnam, ipsum expedita! Obcaecati voluptatibus, consequuntur quia velit, quas vero dolores inventore neque dolore quaerat, culpa rem?</p>
+        <picture>
+            <source media="(max-width:600px )" srcset="imagens/irina-blok-pq.jpg">
+            <img src="imagens/irina-blok.jpg" alt="Irina Blok" id = "myImage">
+        </picture>
+        <button id = "botaogrande"   onclick="document.getElementById('myImage').src ='imagens/irina-blok.jpg'" >
+           foto grande
+        </button>
+        <button id ='botaopequena'onclick="document.getElementById('myImage').src='imagens/irina-blok-pq.jpg'">
+            foto pequena
+        </button>
+        <p id ="demo">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est quasi unde eos odio dolorem maxime officia odit deleniti. Quaerat ratione natus tempore temporibus repellat voluptas nesciunt nulla unde optio voluptates. Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam eveniet, temporibus, culpa saepe eius dolorum, ex cum fuga minima voluptate reiciendis! Atque consequatur eos aspernatur at explicabo suscipit illum laudantium!</p>
+       <button type="button" onclick="document.getElementById('demo').style.display='none'">
+      sumir com o paragrafo
+       </button>
+       <button type="button" onclick="document.getElementById('demo').style.display='block'">
+        mostrar paragrafo
+       </button>
+       <button type="button" onclick="myFunction()">
+        tente isso!!!
+       </button>
+    </main>
+</body>
+</html>
